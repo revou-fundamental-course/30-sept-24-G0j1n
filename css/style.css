@@ -1,1 +1,48 @@
 /* Ini css */
+
+body {
+    margin: 50px;
+    background: antiquewhite;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
+.suhu-style {
+    font-size: 20px;
+    font-family: math;
+    font-style: italic;
+}
+
+.padding-16 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.form-btn {
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.form-btn-submit {
+    background-color: green;
+    color: white;
+}
+
+.form-btn-reset {
+    background-color: blue;
+    color: white;
+}
+
+.form-btn-reverse {
+    background-color: red;
+    color: white;
+}
+
+textarea {
+
+}
