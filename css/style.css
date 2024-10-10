@@ -1,53 +1,271 @@
-/* Ini css */
-
-body {
-    margin: 50px;
-    background: antiquewhite;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 500px;
+:root {
+    --bsc-margin: 0.4rem;
+    --main-content-border: #2c85eb solid 1px;
+    --btn-height: 1.5rem;
+    --large-padding: 50px;
+    --medium-padding: 30px
 }
 
-.suhu-style {
-    font-size: 20px;
+html {
+    font-family: sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    line-height: 1.6rem;
+    text-align: justify;
+    color: #210303;
+    background: no-repeat linear-gradient(#6064ad, #ca5656);
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    /* TODO - EDIT THE WIDTH */
+    max-width: 500px;
+    border-right: var(--main-content-border);
+}
+
+a {
+    color: blue;
+}
+
+a:hover{
+    color: red;
+}
+
+nav a {
+    display: block;
+}
+
+header {
+    padding-right: var(--large-padding);
+    font-size: larger;
+    text-align: left;
+    border-bottom: 3px double #B4B4B4;
+}
+
+h1 {
+    line-height: 2.6rem;
+}
+
+section {
+    padding: var(--large-padding) var(--large-padding) var(--large-padding) 0;
+    border-bottom: var(--main-content-border);
+}
+
+footer {
+    font-size: 18px;
+    text-align: center;
+    color: #4f00aa;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+#input-temperature {
+    all: unset;
+    padding: 0px 0.2rem;
+    height: 1.4rem;
+    width: 6rem;
+    border-radius: 2px;
+    background-color: #EAEAEA;
+    border: 1px solid #C2C2C2;
+}
+
+/* #result div {
+    margin-bottom: 2rem;
+} */
+
+#result div p {
+    text-wrap: nowrap;
+    margin: 0.5rem 0;
+}
+
+#result div div {
+    font-weight: 500;
+}
+
+.temper-style {
     font-family: math;
+    font-size: 20px;
     font-style: italic;
 }
 
-.suhu-opr {
-    font-size: 20px;
-    font-family: math;
+.heading-colr {
+    color: #464646
 }
 
-.padding-16 {
-    padding-top: 16px;
-    padding-bottom: 16px;
+.container {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.instruction p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.from-convert {
+    display: flex;
+    align-items: center;
+}
+
+.from-convert label {
+    margin-right: var(--bsc-margin);
+    text-wrap: nowrap;
+}
+
+.temper-drop {
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    color: #5C5C5C;
+    border: #CDCDCD solid 1px;
+    background-color: #FFFCFC;
+    height: 1.6rem;
+    margin-right: var(--bsc-margin);
+}
+
+.form-btn-group {
+    margin-left: var(--bsc-margin);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-btn-group div {
+    display: inline-block;
 }
 
 .form-btn {
-    border: none;
-    padding: 8px;
+    all: unset;
+    border: #CDCDCD solid 1px;
+    background-color: #FFFCFC;
+    line-height: var(--btn-height);
+    text-wrap: nowrap;
+    height: var(--btn-height);
+    padding: 0 13px;
+    font-size: small;
+    font-weight: 500;
     border-radius: 8px;
 }
 
 .form-btn-submit {
-    background-color: green;
+    font-weight: 400;
     color: white;
+    border: none;
+    background-color: #2339FC;
 }
 
-.form-btn-reset {
-    background-color: blue;
-    color: white;
+.form-btn-submit:hover{
+    cursor: pointer;
+    background-color: #0016dd;
 }
 
-.form-btn-reverse {
-    background-color: red;
-    color: white;
+.form-btn-submit span {
+    margin-right: 4px;
 }
 
-textarea {
+.form-btn-group div button:hover{
+    cursor: pointer;
+    background-color: #d7d7d7;
+}
 
+.validation {
+    color: red;
+    margin-bottom: 0;
+}
+
+.result-calc div {
+    height: 100px;
+}
+
+.calc-detail {
+    border-bottom: none;
+}
+
+.margin-btm-md {
+    margin-bottom: 2.6rem;
+}
+
+.font-weight-md {
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0 3rem;
+    top: 3rem;
+    height: fit-content;
+    position: sticky;
+}
+
+/* for tablet */
+@media only screen and (max-width: 768px) {
+    main {
+        /* max-width: 500px; */
+        max-width: 100%;
+        margin: auto 5rem;
+        border-left: var(--main-content-border);
+    }
+
+    .container {
+        margin-top: 0;
+    }
+
+    header {
+        text-align: center;
+        padding-left: var(--large-padding);
+    }
+
+    section {
+        padding-left: var(--large-padding);
+    }
+}
+
+/* for mobile */
+@media only screen and (max-width: 480px){
+    main {
+        /* max-width: 500px; */
+        width: 100%;
+        margin: 0;
+        border: none;
+    }
+
+    header {
+        text-align: center;
+        padding: 0 var(--medium-padding);
+    }
+
+    section {
+        padding: var(--medium-padding);
+    }
+
+    .from-convert {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .from-convert label {
+        width: 30%;
+        margin: 0;
+    }
+
+    .from-convert #input-temperature {
+        width: 60%;
+        margin-left: auto;
+    }
+
+    .form-btn-group {
+        margin: 0;
+        margin-top: 0.6rem;
+    }
 }
